@@ -1,0 +1,338 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo:rgb(210, 240, 237);
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+    --color-de-fondo-botones: rgb(0, 60, 255);
+    --color-de-fondo-habilidaes-aficiones: rgb(192, 193, 197);  
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* Sección Menú */
+/* Menú-cabercera */
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    background-color: var(--color-de-fondo-menu);
+}
+.cabecera_principal{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecera_logo_nombre{
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecera__logo {
+    width: 22px;
+    height: 22px; /* Ajuste para pantallas pequeñas */
+}
+.cabecera__titulo {
+    font-size: 1.2rem;
+}
+
+/* Menú-navegación */
+.navegacion__lista {
+    display: none
+}
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+
+/* Sección presentación */
+.presentacion,.sobre-mi,
+.habilidades, .aficiones, 
+.formacion, .proyectos, 
+.contacto{
+    padding: 45px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.presentacion{
+    background-color: var(--color-de-fondo-menu);
+}
+.presentacion__foto{
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+}
+.redes{
+    display: flex;
+    padding: 0;
+    gap: 15px;
+}
+
+/* Sección Habilidades y aficiones*/
+.habilidades__lista, 
+.aficiones__lista{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+}
+.habilidades__elemento, 
+.aficiones__elemento{
+height: 150px;
+width: 202px;
+justify-content: space-between;
+align-content: end;
+}
+.habilidades__elemento img,
+.habilidades__elemento p {
+    padding-left: 12px;
+}
+.habilidades__titulo, 
+.aficiones__titulo, 
+.formacion__titulo, 
+.proyectos__titulo, 
+.radapie_texto{
+text-align: center;
+}
+.aficiones, .habilidades{
+    background-color: var(--color-de-fondo-habilidaes-aficiones);
+    
+}
+.aficiones__elemento, .habilidades__elemento{
+    background-color: var(--color-de-fondo-menu);
+    margin: 10px;
+}
+.aficiones__elemento img,
+.aficiones__elemento p {
+    padding-left: 12px;
+}
+.aficiones__elemento img{
+    width: 32px;
+    height: 32px;
+}
+
+/* Sección de Formación académica */
+.formacion__lista{
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.formacion__elemento{
+    width: 700px;
+    background-color: var(--color-de-fondo-menu);  
+}
+.formacion__icono{ 
+    position: relative;
+    left: 25%;
+    top: 10px;
+    width: 180px;
+    height: 120px;
+}
+.formacion_datos{
+    padding-bottom:20px;
+    background-color: var(--color-de-fondo);
+}
+.formacion__detalle,.formacion__nombre{
+    margin: 0;
+}
+
+/* Sección de Proyectos */
+.proyectos{
+    background-color: var(--color-de-fondo-menu);
+}
+.proyectos__contenedor{
+    display: flex;
+    }
+.proyectos__descripcion img{
+    width: 500px;    
+    height: 200px;
+}
+.boton_inf{
+    display: flex;
+    gap: 20px;  
+}
+.demo__boton{
+    width: 125px;
+    height: 40px;
+    background-color: var(--color-de-fondo-botones);
+    color: var(--color-de-fondo-menu);
+    border-color: var(--color-de-fondo-menu);
+    border-radius: 15%;
+}
+.repo__boton{
+    width: 125px;
+    height: 40px;
+    background-color:var(--color-de-fondo-menu);
+    color:var(--color-de-fondo-botones);
+    border-color: var(--color-de-fondo-botones);
+    border-radius: 15%;
+
+}
+
+
+/* Sección de Contacto */
+.contacto__formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    }
+.contacto__campo{
+        height: 40px;
+    }
+.contacto_icono{
+    display: none;
+}
+.contacto__boton{
+    width: 50%;
+    height: 40px;
+    background-color: rgb(0, 60, 255);
+    color: var(--color-de-fondo-menu);
+}
+
+/* Sección de Rodapie */
+footer{
+    background-color: var(--color-de-fondo-menu);  
+}
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 870px) {
+
+   /* Menú-cabercera */
+   .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cabecera__logo {
+        max-width: 100px;
+    }
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    /* Sección presentación */
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;  
+        justify-content: space-between; 
+        align-items: center;          
+    }
+    .presentacion__foto{
+        width: 350px;
+        height: 300px;
+    }
+    
+    /* Sección de Proyectos */
+    .proyectos__descripcion img{
+        width: 790px;    
+        height: 300px;
+    }
+
+    /* Sección de Formación académica */
+    .formacion__elemento{
+        width: 250px;
+    }
+    
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    
+
+    /* Menú-cabercera */
+    .cabecera{
+        justify-content: space-between;
+    }
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    /* Menú-navegación */
+    .navegacion__conteiner{
+        display: flex;
+        align-self: center;
+        gap: 50px;  
+    }
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+        padding-top: 13px;
+        white-space: nowrap;
+    }
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+
+    /* Sección presentación */
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;   
+           
+    }
+    .presentacion__foto{
+        width: 500px;
+        height: 500px;
+    }
+    .redes{
+        gap: 30px;
+    }
+
+    /* Sección Habilidades y aficiones*/
+    .habilidades__elemento, .aficiones__elemento{
+        height: 150px;
+        width: 185px;
+        justify-content: space-between;
+        align-content: end;
+        margin: 10px 10px;
+    }
+
+    /* Sección de Formación académica */
+    .formacion__elemento{
+        width: 400px;
+        height: 200px;
+    }
+
+    /* Sección de Proyectos */
+    .proyectos__descripcion{
+        display: flex;
+        padding: 80px 0px 80px 0px;
+        gap: 50px;   
+        align-items: center;
+    }
+    .proyectos__descripcion img{
+        width: 700px;    
+        height: 500px;    
+    }
+
+    /* Sección de Contacto */
+    .contacto{
+        display: flex;
+        gap: 50px;
+    }
+    .contacto_icono{
+        display: block;
+    }
+}
